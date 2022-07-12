@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>figure_calculator</title>
+</head>
+<body>
+
+<input id="num1"/>
+<input id="action" type="text" placeholder="ввседите + - * /">
+<input id="num2"/>
+
+<button onclick="func()">равняется...</button>
+
+<p id="result"></p>
+
+<script>
+function func(){
+    let num1= Number(document.getElementById('num1').value)
+    let num2= Number(document.getElementById('num2').value)
+    let action= String(document.getElementById('action').value)
+    console.log(num1,action, num2)
+if (action== '+'){
+    let sum = num1+num2
+    document.getElementById('result').innerHTML= sum
+}  if (action== '-'){
+    let deduction = num1-num2
+    document.getElementById('result').innerHTML= deduction
+} if (action== '/'){
+        let division = num1/num2
+        document.getElementById('result').innerHTML= division
+} if (action== '*'){
+        let Multiply = num1*num2
+        document.getElementById('result').innerHTML= Multiply
+    }
+
+}
+
+
+</script>
+</body>
+</html>
